@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title><?php echo $setting['name']; ?></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="<?php echo  $settings['name']; ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.3/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="./css/login2.css">
+</head>
+
+
+<body>
+  <style>
+    .loginform {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 450px;
+      width: 430px;
+    }
+  </style>
+
+  <div class="background">
+
+    <div class="container">
+
+
+      <div class="uk-width-1-1 loginform">
+        <div class="formcss" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+          <div class="uk-width-1-1 headerddiv">
+            <div class="uk-grid">
+              <div class="uk-width-auto">
+                <a href=""><img src="./img/logo.png" class="logo"> </a>
+              </div>
+              <div class="uk-width-expand uk-text-right">
+                <a class="uk-button uk-button-default create_btn" href="/">Login Account</a>
+              </div>
+            </div>
+
+            <img src="./img/login.png" class="logingif">
+            <p class="smalltxt">We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password! </p>
+
+          </div>
+          <h3 class="uk-text-center signinhd">Forgot Your Password?</h3>
+          <span class="signinsubhd">Welcome Back</span>
+
+          <form class="uk-form-stacked" method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
+            <div class="inputdiv">
+              <?php echo $display_msg; ?>
+              <input class="form-control" type="hidden" placeholder="token" name="token" value="<?php echo $_REQUEST['random']; ?>">
+
+              <div class="uk-margin">
+                <div class="uk-inline">
+                  <i class="uk-form-icon fa fa-lock"></i>
+                  <input class="uk-input" type="password" name="password" placeholder="Enter Password">
+                </div>
+              </div>
+              <div class="uk-margin">
+                <div class="uk-inline">
+                  <i class="uk-form-icon fa fa-unlock-alt"></i>
+                  <input class="uk-input" type="password" name="retypepassword" placeholder="Re-enter Password">
+                </div>
+              </div>
+
+              <div class="uk-text-center uk-width-1-1@s">
+                <button class="uk-button uk-button-default gbtn uk-margin-remove-top" name="change_pass">Reset Password</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

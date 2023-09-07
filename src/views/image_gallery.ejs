@@ -1,0 +1,55 @@
+<%- include('header.ejs') %>
+<div class="content">
+  <div class="contentdiv">
+    <div class="" uk-grid>
+      <div class="uk-width-auto uk-margin-small-bottom">
+        <h3 class="ukhd">Image gallery</h3>
+      </div>
+      <div class="uk-width-expand">
+        <div class="uk-width-1-1@s uk-text-right uk-margin-small-bottom">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="uk-card uk-card-body uk-card-default">
+      <?php echo $display_msg; ?>
+      <div class="uk-placeholder uk-text-center">
+        <span uk-icon="icon: cloud-upload"></span>
+        <span class="uk-text-middle">Attach binaries by dropping them here or</span>
+        <div uk-form-custom>
+          <input type="file" multiple>
+          <span class="uk-link">selecting one</span>
+        </div>
+      </div>
+
+      <div class="uk-width-1-1@s uk-text-center">
+        <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save Image</button>
+      </div>
+    </div>
+
+    <div class="uk-grid-small uk-child-width-1-6@s uk-margin-small-top" uk-grid>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+      <div>
+        <img src="./img/photo.jpg">
+      </div>
+    </div>
+
+  </div>
+</div>
+<%- include('footer.ejs') %>

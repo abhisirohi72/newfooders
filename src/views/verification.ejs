@@ -1,0 +1,93 @@
+<%- include('header.ejs') %>
+<div class="content">
+  <div class="contentdiv">
+
+    <div class="" uk-grid>
+      <div class="uk-width-large@m">
+        <h3 class="ukhd">Verification</h3>
+        <div class="uk-card uk-card-body uk-card-default">
+          <h4><b><u>Update Documents</u></b></h4>
+          <?php echo $display_msg; ?>
+          <form class="uk-grid-small" uk-grid method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+            <div class="uk-width-1-1@s">
+              <div class="uk-margin">
+                <label class="uk-form-label">Document Type <span class="uk-text-danger">*</span></label>
+                <div class="uk-form-controls">
+                  <select class="uk-select js-example-basic-single" name="menu">
+                    <option value="">Select Document Type</option>
+                    <option value="1">FSSAI License</option>
+                    <option value="2">PAN Card</option>
+                    <option value="3">GST</option>
+                    <option value="4">Menu</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="uk-width-1-1@s">
+              <div class="uk-margin">
+                <label class="uk-form-label">Choose document</label>
+                <div class="uk-form-controls uk-margin-small-top">
+                  <input name="profile_pic" type="file">
+                </div>
+              </div>
+
+            </div>
+            <div class="uk-width-1-1@s">
+              <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save Document</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="uk-width-expand@m">
+        <h3 class="ukhd">&nbsp;</h3>
+
+        <div class="uk-card uk-card-body uk-card-default">
+          <?php echo $display; ?>
+
+          <ul uk-accordion="multiple: true" class="accord1">
+            <li class="uk-open">
+              <a class="uk-accordion-title" href="#">FSSAI License</a>
+              <div class="uk-accordion-content">
+                <div class="uk-child-width-expand@s" uk-grid>
+                  <div>
+                    <span>File #1</span>
+                  </div>
+                  <div>
+                    <span class="uk-label uk-label-warning arrowed"><strong>Not Verified</strong></span>
+                  </div>
+                  <div class="uk-text-right">
+                    <button class="uk-button redbtn uk-button-small">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="uk-accordion-title" href="#">PAN Card</a>
+              <div class="uk-accordion-content">
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+              </div>
+            </li>
+            <li>
+              <a class="uk-accordion-title" href="#">GST</a>
+              <div class="uk-accordion-content">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+              </div>
+            </li>
+            <li>
+              <a class="uk-accordion-title" href="#">Menu</a>
+              <div class="uk-accordion-content">
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<%- include('footer.ejs') %>

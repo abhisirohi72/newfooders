@@ -1,0 +1,55 @@
+<%- include('header.ejs') %>
+<div class="content">
+  <div class="contentdiv">
+    <div class="" uk-grid>
+      <div class="uk-width-auto uk-margin-small-bottom">
+        <h3 class="ukhd">Manage tables</h3>
+      </div>
+      <div class="uk-width-expand">
+        <div class="uk-width-1-1@s uk-text-right uk-margin-small-bottom">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="uk-card uk-card-body uk-card-default">
+      <?php echo $display_msg; ?>
+      <div class="uk-overflow-auto">
+
+        <table class="uk-table tablecss uk-table-striped" id="commonTable">
+          <thead>
+            <tr>
+              <th>S.No.</th>
+              <th>Table Name</th>
+              <th>Table Number</th>
+              <th class="uk-table-expand">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="T1"></td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="1C"></td>
+              <td> <a href="" class="uk-button primarybtn  uk-button-small"><i class="fa fa-file"></i> Save</a>&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="T2"></td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="2"></td>
+              <td> <a href="" class="uk-button primarybtn  uk-button-small"><i class="fa fa-file"></i> Save</a>&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="T3"></td>
+              <td> <input class="uk-input uk-width-medium" type="text" placeholder="" value="3"></td>
+              <td> <a href="" class="uk-button primarybtn  uk-button-small"><i class="fa fa-file"></i> Save</a>&nbsp;&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+<%- include('footer.ejs') %>

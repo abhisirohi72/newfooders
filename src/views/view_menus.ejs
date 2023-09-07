@@ -1,0 +1,38 @@
+<%- include('header.ejs') %>
+<div class="content">
+    <div class="contentdiv">
+        <div class="" uk-grid>
+            <div class="uk-width-auto">
+                <h3 class="ukhd">View Menus</h3>
+            </div>
+            <div class="uk-width-expand">
+                <div class="uk-width-1-1@s uk-text-right uk-margin-small-bottom">
+                        <a href="./add-menu.html" class="uk-button uk-button-default custombtn">
+                        <i class="fa fa-plus"></i> Add Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-body uk-card-default">
+            <div class="uk-overflow-auto">
+                <table class="uk-table tablecss" id="commonTable" >
+                    <thead>
+                        <tr>
+                            <!-- <th>S.No.</th> -->
+                            <th class="uk-table-expand">Menu</th>
+                            <th class="uk-table-expand">Description</th>
+                            <th>Status</th>
+                            <th>Total Product</th>
+                            <th class="uk-table-expand">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div id="pagination-container">
+                    <ul class="pagination"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('footer.ejs') %>

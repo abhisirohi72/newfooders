@@ -1,0 +1,209 @@
+ </div>      
+        </div>
+        
+ </div>
+
+</div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$('.dropdown-toggle').click(function() {
+  $('.dropdowncss').css('display', 'none'); // Hide submenus when other submenus are clicked
+  $(this).next('.dropdowncss').toggle();
+});
+
+$(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+
+    
+
+<script>
+        $(document).ready(function() {
+            $('#commonTable').DataTable({
+                dom: 'Blfrtip',
+                searching: true,
+                autoWidth: false,
+                "lengthChange": true,
+                "order": [
+                    [0, "desc"]
+                ],
+                "ordering": true,
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                    "url": "<?php echo $linkdata; ?>",
+                    "type": "POST"
+                },
+                "bProcessing": true,
+                "oLanguage": {
+                    "sProcessing": "<div class='text-center pt-3 mt-5'><img style='width:25px;' src='<?php echo SITE_URL . '/assets/backend/img/hourglass.svg'; ?>'><br><b>Processing... Please wait!</b></div>"
+                },
+                "fnRowCallback": function(nRow, aData, iDisplayIndex) {
+                    var oSettings = this.fnSettings();
+                    $("td:first", nRow).html(oSettings._iDisplayStart + iDisplayIndex + 1);
+                    return nRow;
+                },
+            });
+
+
+        });
+    </script>
+<script>
+    // Area Chart Example
+    var ctx = document.getElementById("myAreaChart");
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Apr','May','June'],
+            datasets: [{
+                label: "Earnings",
+                lineTension: 0.3,
+                backgroundColor: "rgba(78, 115, 223, 0.05)",
+                borderColor: "rgba(78, 115, 223, 1)",
+                pointRadius: 3,
+                pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                pointBorderColor: "rgba(78, 115, 223, 1)",
+                pointHoverRadius: 3,
+                pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                pointHitRadius: 10,
+                pointBorderWidth: 2,
+                data: [10, 20, 15],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 25,
+                    top: 25,
+                    bottom: 0
+                }
+            },
+            scales: {
+                xAxes: [{
+                    time: {
+                        unit: 'date'
+                    },
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        maxTicksLimit: 7
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        maxTicksLimit: 5,
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return '$' + number_format(value);
+                        }
+                    },
+                    gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                    }
+                }],
+            },
+            legend: {
+                display: false
+            },
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                titleMarginBottom: 10,
+                titleFontColor: '#6e707e',
+                titleFontSize: 14,
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                intersect: false,
+                mode: 'index',
+                caretPadding: 10,
+                callbacks: {
+                    label: function(tooltipItem, chart) {
+                        var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                        return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+                    }
+                }
+            }
+        }
+    });
+</script>
+<script>
+
+var ctx = document.getElementById("myPieChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Pending Number", "Complete Number", "Email Pending"],
+    datasets: [{
+      data: [20, 40, 25],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 80,
+  },
+});
+
+</script>
+
+
+<script>
+var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      borderDash: [8,10],
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "#5ef0b5",
+      fill: false
+    }/*, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }*/]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+</body>
+</html>

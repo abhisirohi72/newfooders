@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head> 
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Login</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="<?php echo  $settings['name']; ?>">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato&family=Roboto&display=swap" rel="stylesheet">
+    
+   <link rel="stylesheet" href="./css/login2.css">
+ </head>
+
+
+<body>
+<style>
+
+</style>
+
+<div class="background">
+    
+    <div class="container">
+       
+        
+        <div class="uk-width-1-1 loginform">
+            <form class="uk-form-stacked formcss" method="post" id="loginForm">
+                <div class="uk-width-1-1 headerddiv">
+                     <div class="uk-grid">
+                         <div class="uk-width-auto">
+                              <a href=""><img src="./img/logo.png" class="logo"> </a>
+                         </div>
+                         <div class="uk-width-expand uk-text-right">
+                             <a class="uk-button uk-button-default create_btn" href="signup">Create Account</a>
+                         </div>
+                     </div>
+                     
+                     <img src="./img/login.png" class="logingif"> 
+                     <p class="smalltxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+                     
+                </div>
+                       <h3 class="uk-text-center signinhd">USER LOGIN</h3>
+                       <span class="signinsubhd">Welcome Back</span>
+                        <p id="error" style="color: rgb(235, 17, 17);display: none;"></p>
+                        <p id="success" style="color: rgb(42, 245, 2);display: none;"></p>
+                     <div class="inputdiv"> 
+                     
+                        <div class="uk-margin uk-margin-small-top">
+                            <div class="uk-inline">
+                              <i class="uk-form-icon fa fa-user-circle-o"></i>
+                               <input class="uk-input" id="form-stacked-text" type="email" placeholder="Enter Email" name="email" value="lava@gmail.com">
+                             </div>
+                        </div>
+                    
+                        <div class="uk-margin">
+                           <div class="uk-inline">
+                              <i class="uk-form-icon fa fa-lock"></i>
+                            <input class="uk-input" id="form-stacked-text" type="password" placeholder="Enter your password" name="password" value="demo1234">
+                          </div>
+                        </div>
+                         <div class="uk-child-width-expand" uk-grid>
+                                <div class="uk-text-left">
+                                     <!-- <label class="forgottxt"><input class="uk-checkbox" type="checkbox"> Remember?</label> -->
+                                </div>
+                                <div class="uk-text-right">
+                                    <a href="forgot_pass" class="forgottxt">Forgot Password?</a>
+                                </div>
+                            </div>
+                        
+                        <div class="uk-text-center uk-width-1-1@s">
+                            <input type="hidden" value="web" name="req_process"> 
+                            <button class="uk-button uk-button-default gbtn" name="submit_login" type="submit">Login</button>
+                        </div>
+                    </div>
+                    </form>
+                    
+        
+        </div>
+        
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            $("#error, #success").hide();
+            e.preventDefault(); // Prevent the default form submission
+
+            const formData = new FormData(this); // Create a FormData object from the form
+
+            fetch('/check_login', {
+                method: 'POST',
+                body: formData,
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if(data.status===false){
+                    $("#error").text(data.message);
+                    $("#error").show();
+                }else if(data.status===true){
+                    window.location.href = '/live_orders';
+                }
+                // Handle the response from the server
+                console.log(data);
+            })
+            .catch((error) => {
+                // Handle any errors that occur during the request
+                console.error(error);
+            });
+        });
+    </script>
+</body>
+</html>
+

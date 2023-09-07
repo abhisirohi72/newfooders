@@ -1,0 +1,484 @@
+<%- include('header.ejs') %>
+<div class="content">
+  <div class="contentdiv">
+    <div class="" uk-grid>
+      <div class="uk-width-expand@m">
+        <div class="" uk-grid>
+          <div class="uk-width-auto  uk-margin-small-bottom">
+            <h3 class="ukhd"> Fooders Cp</h3>
+          </div>
+          <div class="uk-width-expand">
+            <div class="uk-width-1-1@s uk-text-right">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="uk-card uk-card-body uk-card-default">
+
+          <ul class="uk_tab_custom" uk-tab>
+            <li><a href="#"> Fooder’s Business Profile</a></li>
+            <li><a href="#"> Fooder’s Services & Settings</a></li>
+            <li><a href="#"> Fooder’s Delivery Regions</a></li>
+            <li><a href="#"> Delivery Charges</a></li>
+          </ul>
+
+          <ul class="uk-switcher uk-margin">
+            <li>
+              <h5><u>Business Details</u></h5>
+              <form class="uk-grid-small" uk-grid method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Fooder’s Name <span class="uk-text-danger">*</span></label>
+                    <div class="uk-form-controls">
+                      <input class="uk-input" name="" type="text" placeholder="Enter Fooder’s Name" value="">
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label"> Started On </label>
+                    <div class="uk-form-controls">
+                      <input class="uk-input" name="" type="date" placeholder="Enter Started On" value="">
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Mobile <span class="uk-text-danger">*</span></label>
+                    <div class="uk-form-controls">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon"><i class="fa fa-mobile"></i>&nbsp; 91</span>
+                        <input class="uk-input" type="text" placeholder="Enter Mobile" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Landline </label>
+                    <div class="uk-form-controls">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon"><i class="fa fa-phone"></i></span>
+                        <input class="uk-input" type="text" placeholder="Enter Mobile" value="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">GSTIN </label>
+                    <div class="uk-form-controls">
+                      <input class="uk-input" type="text" placeholder="Enter GSTIN" value="">
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="uk-width-1-1@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Address <span class="uk-text-danger">*</span></label>
+                    <div class="uk-form-controls">
+                      <textarea class="uk-textarea" name="address" placeholder="Enter Address"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Location <span class="uk-text-danger">*</span></label>
+                    <h4 class="uk-margin-small-top">Belanganj Civil Lines ,Agra ,Uttar Pradesh <a href=""><u>Change</u></a></h4>
+                    <div class="uk-form-controls">
+                      <select class="uk-select js-example-basic-single" name="">
+                        <option value="">Select State</option>
+                      </select>
+                    </div>
+                    <div class="uk-form-controls">
+                      <select class="uk-select js-example-basic-single" name="">
+                        <option value="">Select City</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="uk-width-1-1@s">
+                  <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save Business Profile</button>
+                </div>
+              </form>
+            </li>
+
+
+            <li>
+
+              <h5><u>Services & Settings</u></h5>
+              <form class="uk-grid-small" uk-grid method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+
+                <div class="uk-width-1-3@s">
+                  <img src="./img/undraw_profile.svg" style="width:157px;height:auto;">
+                  <div class="uk-margin ">
+                    <label class="uk-form-label"> Choose Logo </label>
+                    <div class="uk-form-controls uk-margin-small-top">
+                      <input name="" type="file">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin togglecss">
+                    <label class="uk-form-label"> Are you open ?
+                      <div class="button r" id="button-1">
+                        <input type="checkbox" class="checkbox" />
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label"> Type <span class="uk-text-danger">*</span></label>
+                    <div class="uk-form-controls">
+                      <select class="uk-select js-example-basic-single" name="">
+                        <option value="">Select Type</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Delivery Time </label>
+                    <div class="uk-form-controls">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon-flip"> min </span>
+                        <input class="uk-input" type="text" aria-label="Not clickable icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="uk-width-2-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label"> Search Tags</label>
+                    <div class="uk-form-controls">
+                      <div id="tags">
+                        <span>php</span>
+                        <span>c++</span>
+                        <span>jquery</span>
+                        <input type="text" value="" placeholder="Add a tag" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">CGST + SGST </label>
+                    <div class="uk-form-controls">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon-flip"> <i class="fa fa-percent"></i> </span>
+                        <input class="uk-input" type="text" aria-label="Not clickable icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Tax Name 2</label>
+                    <div class="uk-form-controls">
+                      <input class="uk-input" name="" type="text" placeholder="Enter Tax Name 2" value="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-3@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Tax 2 Value</label>
+                    <div class="uk-form-controls">
+                      <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon-flip"> <i class="fa fa-percent"></i> </span>
+                        <input class="uk-input" type="text" aria-label="Not clickable icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="uk-width-1-1@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">About Us </label>
+                    <div class="uk-form-controls">
+                      <textarea class="uk-textarea" name="aboutus" placeholder="Enter About Us"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-1@s">
+                  <div class="uk-margin">
+                    <label class="uk-form-label">Facilities </label>
+                    <div class="uk-form-controls">
+                      <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                        <label><input class="uk-checkbox" type="checkbox" checked>Delivery </label>
+                        <label><input class="uk-checkbox" type="checkbox"> Take Out</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Serves Veg (only)</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Dine In </label>
+                        <label><input class="uk-checkbox" type="checkbox"> Parking</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Bar</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Wi Fi </label>
+                        <label><input class="uk-checkbox" type="checkbox"> Accepts CC </label>
+                        <label><input class="uk-checkbox" type="checkbox"> Table Booking</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="uk-width-1-1@s">
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Monday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Tuesday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Wednesday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Thursday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Friday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Saturday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+
+                  <div class="uk-grid-small" uk-grid>
+                    <div class="uk-width-small@m">
+                      <label class="uk-form-label">Sunday </label>
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                    <div class="uk-width-small@m">
+                      <input class="uk-input" type="time">
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="uk-width-1-1@s">
+                  <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save Business Profile</button>
+                </div>
+              </form>
+            </li>
+
+            <li class="dlryregn">
+
+              <div uk-grid>
+                <div class="uk-width-auto@m ">
+                  <ul class="uk-tab-right" uk-tab="connect: #component-tab-right; animation: uk-animation-fade">
+                    <li><a href="#">Kilometer(s) Coverage</a></li>
+                    <li><a href="#"> Delivery Areas <span class="uk-label uk-label-danger">1 out of 158</span></a></li>
+                  </ul>
+                </div>
+                <div class="uk-width-expand@m uk-flex-last@m">
+                  <ul id="component-tab-right" class="uk-switcher">
+                    <li>
+                      <form class="uk-grid-small" uk-grid method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                        <div class="uk-width-1-3@s">
+                          <div class="uk-margin">
+                            <label class="uk-form-label">Area Coverage </label>
+                            <div class="uk-form-controls">
+                              <div class="uk-inline">
+                                <span class="uk-form-icon uk-form-icon-flip">Kms.</span>
+                                <input class="uk-input" type="text" aria-label="Not clickable icon">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="uk-width-1-1@s">
+                          <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save </button>
+                        </div>
+                      </form>
+                    </li>
+                    <li>
+
+                      <div class="uk-width-1-1@s">
+                        <div class="uk-margin">
+                          <label class="uk-form-label">Delivery Area </label>
+                          <div class="uk-form-controls">
+                            <div class="uk-margin  uk-child-width-auto uk-grid">
+                              <label><input class="uk-checkbox" type="checkbox" checked> Lajpat Kunj </label>
+                              <label><input class="uk-checkbox" type="checkbox"> Surya Nagar Civil Lines</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Nehru Nagar Civil Lines</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Soamibagh Dayal Bagh</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Moti Bagh</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Amar Vihar Dayal Bagh</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Nawalganj</label>
+                              <label><input class="uk-checkbox" type="checkbox"> Model Town Idgah Colony</label>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+
+
+
+            <li>
+              <h5><u>Manage Delivery Charges (Max 5 Delivery Range Allowed!)</u></h5>
+              <div class="" uk-grid>
+                <div class="uk-width-1-3@m">
+                  <form class="uk-grid-small" uk-grid method="post" action="<?php $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+
+
+
+                    <div class="uk-width-1-2@s">
+                      <div class="uk-margin">
+                        <label class="uk-form-label">Min Range </label>
+                        <div class="uk-form-controls">
+                          <input class="uk-input" name="" type="text" placeholder="Min Range " value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="uk-width-1-2@s">
+                      <div class="uk-margin">
+                        <label class="uk-form-label"> Max Range </label>
+                        <div class="uk-form-controls">
+                          <select class="uk-select js-example-basic-single" name="">
+                            <option value="">Select Range</option>
+                            <option value="0">0</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="uk-width-1-2@s">
+                      <div class="uk-margin">
+                        <label class="uk-form-label">Delivery charge </label>
+                        <div class="uk-form-controls">
+                          <input class="uk-input" name="" type="text" placeholder="Delivery charge" value="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="uk-width-1-2@s">
+                      <div class="uk-margin">
+                        <label class="uk-form-label">Order Amount(Min) </label>
+                        <div class="uk-form-controls">
+                          <input class="uk-input" name="" type="text" placeholder="Order Amount(Min)" value="">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="uk-width-1-1@s">
+                      <button type="submit" class="uk-button uk-button-default custombtn" name=""><i class="fa fa-save"></i> Save Delivery Charge</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="uk-width-expand@m">
+                  <div class="uk-overflow-auto">
+
+                    <table class="uk-table tablecss" id="commonTable">
+                      <thead>
+                        <tr>
+                          <th>S.No</th>
+                          <th>Min Range(KM)</th>
+                          <th>Max Range(KM)</th>
+                          <th>Delivery Charge</th>
+                          <th>Minimum Order Amount</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>20</td>
+                          <td>&#8377;0.00</td>
+                          <td>&#8377;0.00</td>
+                          <td><i class="fa fa-trash uk-text-danger"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<%- include('footer.ejs') %>
